@@ -8,6 +8,7 @@ public class Tornado : BasisSpecialBallScript
     public override IEnumerator CAbility(int collume, int row, int offset)
     {
         FieldScript.instance.collums[collume].DeleteBallInstant(row, offset);
+        BallManagerScript.PauseGame++;
 
         int length = FieldScript.instance.collums[collume].Lenght;
         ;

@@ -30,6 +30,8 @@ public class CollumeScript : MonoBehaviour
                 ballIndex + Offset));
 
         ball.transform.SetParent(transform);
+
+        ActivateBallInCollume();
     }
 
     public void SetWeightDisplay(GameObject display)
@@ -43,9 +45,6 @@ public class CollumeScript : MonoBehaviour
 
         balls[row].done = true;
         balls.Remove(balls[row]);
-
-        //balls[row] = null;
-        //balls.Remove(null);
 
         for (int i = row; i < balls.Count; i++)
         {
@@ -73,9 +72,6 @@ public class CollumeScript : MonoBehaviour
 
         balls.Remove(balls[row + newOffset]);
 
-        //balls[row + newOffset] = null;
-        //balls.Remove(null);
-
         for (int i = row + newOffset; i < balls.Count; i++)
         {
             BallManagerScript.instance.AddBallsMovement(balls[i],
@@ -102,8 +98,6 @@ public class CollumeScript : MonoBehaviour
         balls[row].StartCollume = Index;
         ChangerScript.instance.AddBallsMovement(balls[row]);
         balls.Remove(balls[row]);
-        //balls[row] = null;
-        //balls.Remove(null);
     }
 
     public int CalculateValue()
@@ -219,5 +213,21 @@ public class CollumeScript : MonoBehaviour
     public void PlayDeathParticle(BallScript ball)
     {
         ball.SetDeathParticleAndPlay();
+    }
+
+    public Vector3Int GetBallIndex(BallScript ball)
+    {
+        return new Vector3Int(0, balls.IndexOf(ball), Offset);
+    }
+
+    public void ActivateBallInCollume()
+    {
+        for (int i = 0; i < balls.Count; i++)
+        {
+            if (balls[i].standby)
+            {
+                StartCoroutine(balls[i].ability?.CAbility(index, i, Offset));
+            }
+        }
     }
 }

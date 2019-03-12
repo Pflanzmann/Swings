@@ -66,14 +66,18 @@
 					return col;
 				}
 
+				float pointDistance = distance((0.5, 0.5), IN.uv);
 
 				fixed4 temp;
 				//Weißer Punkt und Farbe
-				 temp.rgb = lerp(_Color3.rgb, lerp(_Color1.rgb, _Color2.rgb, IN.uv.x), distance((0.5, 0.5), IN.uv) / 0.5);
+				//temp.rgb = lerp(_Color3.rgb, lerp(_Color1.rgb, _Color2.rgb, IN.uv.x), pointDistance / 0.5);
 
-
-				 //col.a = lerp(_Color2, _Color1, _Dissolve);
-
+				 temp.rgb = lerp(_Color1.rgb, _Color2.rgb, IN.uv.x);
+				 temp.rgb = lerp((1,1,1,1), temp.rgb, clamp(pointDistance - 0.1, 0, 1) * 3);
+								
+				//Fresnel Effect
+				//temp.rgb *= lerp(temp.rgb, (1,1,1,1), clamp(pointDistance - 0.3, 0, 1) * 1.5);
+				
 				col.rgb = temp.rgb;
 				col.rgb *= col.a;
 

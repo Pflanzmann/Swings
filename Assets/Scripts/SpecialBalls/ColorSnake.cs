@@ -8,6 +8,7 @@ public class ColorSnake : BasisSpecialBallScript
     public override IEnumerator CAbility(int collume, int row, int offset)
     {
         int color = FieldScript.instance.collums[collume].ReturnColor(row - 1, offset);
+        BallManagerScript.PauseGame++;
 
         if (color <= 0)
         {

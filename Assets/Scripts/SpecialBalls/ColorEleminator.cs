@@ -9,6 +9,7 @@ public class ColorEleminator : BasisSpecialBallScript
     public override IEnumerator CAbility(int collume, int row, int offset)
     {
         int color = FieldScript.instance.collums[collume].ReturnColor(row - 1, offset);
+        BallManagerScript.PauseGame++;
         FieldScript.instance.collums[collume].DeleteBallInstant(row, offset);
 
         if (color <= 0)

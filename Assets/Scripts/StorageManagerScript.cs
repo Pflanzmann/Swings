@@ -50,6 +50,7 @@ public class StorageManagerScript : MonoBehaviour
         ball.gameObject.SetActive(false);
 
         ball.activated = false;
+        ball.standby = false;
         ball.done = false;
         ball.ability = null;
 

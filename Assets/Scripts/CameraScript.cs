@@ -104,7 +104,7 @@ public class CameraScript : MonoBehaviour
     {
         if (!landscape)
         {
-            for (int i = 0; i < rtaUI.Length; i++)
+            for (int i = 0; i < 14; i++)
             {
                 rtaUI[i].localPosition = rta2[i].localPosition;
                 rtaUI[i].rotation = rta2[i].rotation;
@@ -112,7 +112,7 @@ public class CameraScript : MonoBehaviour
         }
         else
         {
-            for (int i = 0; i < rtaUI.Length; i++)
+            for (int i = 0; i < 14; i++)
             {
                 rtaUI[i].localPosition = rta1[i].localPosition;
                 rtaUI[i].rotation = rta1[i].rotation;

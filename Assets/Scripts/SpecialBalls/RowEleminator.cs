@@ -9,6 +9,7 @@ public class RowEleminator : BasisSpecialBallScript
     public override IEnumerator CAbility(int collume, int row, int offset)
     {
         FieldScript.instance.collums[collume].DeleteBallInstant(row, offset);
+        BallManagerScript.PauseGame++;
 
         for (int j = 0; j < 8; j++)
         {

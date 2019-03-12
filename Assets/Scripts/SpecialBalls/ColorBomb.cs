@@ -8,6 +8,7 @@ public class ColorBomb : BasisSpecialBallScript
     public override IEnumerator CAbility(int collume, int row, int offset)
     {
         int color = FieldScript.instance.collums[collume].ReturnColor(row - 1, offset);
+        BallManagerScript.PauseGame++;
 
         if (color <= 0)
         {
@@ -26,6 +27,7 @@ public class ColorBomb : BasisSpecialBallScript
                 if (FieldScript.instance.collums[j].ReturnColor(i) == color)
                 {
                     FieldScript.instance.collums[j].ReturnBall(i).CurrentColor = -2;
+                    FieldScript.instance.collums[j].ReturnBall(i).standby = true;
                 }
             }
         }

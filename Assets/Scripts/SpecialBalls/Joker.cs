@@ -8,7 +8,6 @@ public class Joker : BasisSpecialBallScript
 {
     public override IEnumerator CAbility(int collume, int row, int offset)
     {
-        BallManagerScript.PauseGame--;
         yield break;
     }
 }

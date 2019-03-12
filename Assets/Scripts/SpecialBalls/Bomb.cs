@@ -10,6 +10,7 @@ public class Bomb : BasisSpecialBallScript
     public override IEnumerator CAbility(int collume, int row, int offset)
     {
         FieldScript.instance.collums[collume].DeleteBallInstant(row, offset);
+        BallManagerScript.PauseGame++;
 
         if (collume > 0)
         {

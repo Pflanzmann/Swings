@@ -8,6 +8,7 @@ public class BlackHole : BasisSpecialBallScript
     public override IEnumerator CAbility(int collume, int row, int offset)
     {
         BallScript ball = FieldScript.instance.collums[collume].ReturnBall(row, offset);
+        BallManagerScript.PauseGame++;
         ball.activated = true;
 
         int counter = 0;

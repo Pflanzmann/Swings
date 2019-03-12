@@ -125,6 +125,7 @@ public class BallManagerScript : MonoBehaviour
         for (int i = 0; i < toRemove.Count; i++)
         {
             BallScript ball = toRemove[i];
+            
 
             if (!balls.ContainsKey(ball))
                 continue;
@@ -134,7 +135,6 @@ public class BallManagerScript : MonoBehaviour
                 Vector3 pos = balls[ball];
                 if (!ball.activated && ball.transform.position.y < 8.4)
                 {
-                    PauseGame++;
                     StartCoroutine(ball.ability.CAbility((int)pos.x, (int)pos.y, (int)pos.z));
                 }
             }
@@ -143,7 +143,7 @@ public class BallManagerScript : MonoBehaviour
             if (ball.done)
             {
                 StorageManagerScript.instance.SetBall(ball);
-            } 
+            }
 
             balls.Remove(ball);
         }

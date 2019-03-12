@@ -224,4 +224,22 @@ public class FieldScript : MonoBehaviour
             }
         }
     }
+
+    public Vector3Int FindBallInField(BallScript ball)
+    {
+        Vector3Int pos;
+
+        for (int i = 0; i < collums.Count; i++)
+        {
+            pos = collums[i].GetBallIndex(ball);
+
+            if (pos.y != -1)
+            {
+                pos.x = i;
+                return pos;
+            }
+        }
+
+        return new Vector3Int(-1, -1, -1);
+    }
 }

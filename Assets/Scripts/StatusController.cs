@@ -38,6 +38,7 @@ public class StatusController : MonoBehaviour
             return;
 
         ShopScript.instance.Currency += additionalCurrency;
+        additionalCurrency = 0;
         UIManagerScript.instance.ShowPoints(points);
         pointsChanged = false;
     }

@@ -11,6 +11,7 @@ public class BallScript : MonoBehaviour
     int startCollume;
     public bool activated = false;
     public bool done = false;
+    public bool standby = false;
 
     Color color1 = Color.blue;
     Color color2 = Color.red;
@@ -98,7 +99,6 @@ public class BallScript : MonoBehaviour
 
         text.text = value.ToString();
     }
-
 
     public override string ToString()
     {
