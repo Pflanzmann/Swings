@@ -17,7 +17,6 @@ public class StorageManagerScript : MonoBehaviour
 
     Vector2 storePosition = new Vector2(10, 20);
 
-
     public static StorageManagerScript instance;
     [SerializeField] Sprite standartSprite;
 

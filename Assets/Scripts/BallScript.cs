@@ -60,7 +60,6 @@ public class BallScript : MonoBehaviour
 
             sprite.material.SetColor("_Color1", color1);
             sprite.material.SetColor("_Color2", color2);
-            sprite.material.SetFloat("_Dissolve", 0);
         }
         else
         {

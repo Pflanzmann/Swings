@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3830079727075213778}
   - component: {fileID: 7600819883474680595}
   - component: {fileID: 2506502312629370115}
-  - component: {fileID: 2629529258832842618}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Player
@@ -56,7 +55,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7e1fde473f37b824395ba3f77527e852, type: 2}
+  - {fileID: 2100000, guid: 306cff632cdab4f4d88caceca4af13cf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -103,25 +102,9 @@ MonoBehaviour:
   currentColor: 0
   activated: 0
   done: 0
-  clickable: 0
+  standby: 0
   sprite: {fileID: 0}
   ability: {fileID: 0}
---- !u!58 &2629529258832842618
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 362494404437233642}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.50390625
 --- !u!1 &1685030863762625043
 GameObject:
   m_ObjectHideFlags: 0

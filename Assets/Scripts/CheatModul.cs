@@ -92,6 +92,12 @@ public class CheatModul : MonoBehaviour
                 GrabberScript.instance.currentBall.ability = SpriteHolder.instance.abilitys[15];
                 GrabberScript.instance.currentBall.CurrentColor = -15;
                 break;
+            case "shuffel":
+                ShopScript.instance.ShuffelShop();
+                break;
+            case "heavy":
+                GrabberScript.instance.currentBall.value = 10000;
+                break;
         }
 
         log.text += cheat;

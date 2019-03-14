@@ -124,14 +124,14 @@ public class ShopScript : MonoBehaviour
     {
         while (ball2 == last1 || ball2 == last2 || ball3 == last1 || ball3 == last2 || ball2 == ball3)
         {
-            ball2 = Random.Range(2, SpriteHolder.instance.abilitys.Length - 1);
-            ball3 = Random.Range(2, SpriteHolder.instance.abilitys.Length - 1);
+            ball2 = Random.Range(2, SpriteHolder.instance.abilitys.Length);
+            ball3 = Random.Range(2, SpriteHolder.instance.abilitys.Length);
         }
 
-        last1 = ball1;
-        last2 = ball2;
-        costBall1 = ball1 * 100;
+        last1 = ball2;
+        last2 = ball3;
         costBall2 = ball2 * 100;
+        costBall3 = ball3 * 100;
 
         ShowCosts();
     }
@@ -139,9 +139,9 @@ public class ShopScript : MonoBehaviour
     private void ShowCosts()
     {
         UIManagerScript.instance.shopShuffelPriceText.text = costShuffel + "$";
-        UIManagerScript.instance.shopBall1PriceTet.text = costBall1 + "$";
-        UIManagerScript.instance.shopBall2PriceTet.text = costBall2 + "$";
         UIManagerScript.instance.shopJokerPrice.text = costBall1 + "$";
+        UIManagerScript.instance.shopBall1PriceTet.text = costBall2 + "$";
+        UIManagerScript.instance.shopBall2PriceTet.text = costBall3 + "$";
 
         UIManagerScript.instance.ball1Image.sprite = SpriteHolder.instance.specialballsSprites[ball1];
         UIManagerScript.instance.ball2Image.sprite = SpriteHolder.instance.specialballsSprites[ball2];
