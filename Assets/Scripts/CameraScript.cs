@@ -26,6 +26,9 @@ public class CameraScript : MonoBehaviour
 
         mainCamera = Camera.main;
 
+        if (ui == null)
+            return;
+
         double size;
 
         float ratio = mainCamera.aspect;
@@ -64,6 +67,10 @@ public class CameraScript : MonoBehaviour
     {
         if (currentAspect != mainCamera.aspect)
         {
+
+            if (ui == null)
+                return;
+
             double size;
 
             float ratio = mainCamera.aspect;

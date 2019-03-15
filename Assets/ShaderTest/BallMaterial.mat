@@ -41,7 +41,7 @@ Material:
     - _Value8: 0.494
     - _Value9: -0.23
     m_Colors:
-    - _Color1: {r: 1, g: 0.5254902, b: 0, a: 1}
-    - _Color2: {r: 0.3529412, g: 0.74509805, b: 1, a: 1}
+    - _Color1: {r: 1, g: 0.18396229, b: 1, a: 1}
+    - _Color2: {r: 1, g: 0.18431373, b: 1, a: 1}
     - _ColorBorder: {r: 0, g: 0, b: 0, a: 0}
     - _ColorPoint: {r: 1, g: 1, b: 1, a: 1}
