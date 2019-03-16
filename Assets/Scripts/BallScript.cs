@@ -20,6 +20,9 @@ public class BallScript : MonoBehaviour
     public SpriteRenderer sprite;
     public BasisSpecialBallScript ability = null;
 
+    public Material ballMaterial;
+    public Material defaultMaterial;
+
     public int Momentum { get => momentum; set => momentum = value; }
     public int StartCollume { get => startCollume; set => startCollume = value; }
 
@@ -53,6 +56,8 @@ public class BallScript : MonoBehaviour
     {
         if (currentColor > 0)
         {
+            sprite.material = ballMaterial;
+
             sprite.sortingOrder = -2;
 
             color1 = SpriteHolder.instance.firstColors[currentColor];
@@ -63,6 +68,8 @@ public class BallScript : MonoBehaviour
         }
         else
         {
+            sprite.material = defaultMaterial;
+
             color1 = new Color(1, 1, 1, 1);
             color2 = new Color(1, 1, 1, 1);
 

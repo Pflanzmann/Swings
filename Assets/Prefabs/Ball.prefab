@@ -105,6 +105,8 @@ MonoBehaviour:
   standby: 0
   sprite: {fileID: 0}
   ability: {fileID: 0}
+  ballMaterial: {fileID: 2100000, guid: 306cff632cdab4f4d88caceca4af13cf, type: 2}
+  defaultMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &1685030863762625043
 GameObject:
   m_ObjectHideFlags: 0
